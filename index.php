@@ -6,7 +6,13 @@
 </head>
 
 <body>
-  <h1>Hello World</h1>
+  <h1>
+    <?php
+    // whateverr occurs between these blocks should be interpreted as php rather than html
+    // Hello World wouldn't work, so have ot print a string with echo and "" 
+    echo "Hello World";
+    ?>
+  </h1>
 </body>
 
 </html>
