@@ -8,8 +8,8 @@
 <body>
   <h1>
     <?php
-    // concatenate
-    echo "Hello, " . "Tristan";
+    $greeting = "Hello ";
+    echo $greeting . "Tristan";
     ?>
   </h1>
 </body>
