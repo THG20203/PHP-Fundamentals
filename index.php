@@ -18,13 +18,9 @@
   <!-- php code -->
   <?php
   $name = "dictionary";
-  $read = false;
+  $read = true;
 
-  if ($read) {
-    $message = "You have read $name";
-  } else {
-    $message = "You have not read $name";
-  }
+  $message = "You have read $name";
   ?>
 
   <h1>
