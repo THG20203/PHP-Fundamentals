@@ -28,7 +28,8 @@
   ?>
 
   <h1>
-    <?php echo $message; ?>
+    <!-- <?php echo $message; ?>  -->
+    <?= $message; ?>
   </h1>
 </body>
 
