@@ -10,7 +10,7 @@
 <body>
   <h1>Recommended Books</h1>
 
-  <!-- array is the programming equivalent of a folder. Single varialbe that represents 
+  <!-- array is the programming equivalent of a folder. Single variable that represents 
   a list of recommended books -->
   <?php
   $books = [
@@ -19,8 +19,14 @@
     "Hail Mary",
   ];
   ?>
-  <ul>
 
+  <!-- loop over that list and for each item, display a list item that includes the 
+  name of the book -->
+  <ul>
+    <?php foreach ($books as $book) {
+      echo "<li>Hello</li>";
+    }
+    ?>
   </ul>
 </body>
 
