@@ -15,15 +15,7 @@
   ];
   ?>
 
-  <!-- loop over that list and for each item, display a list item that includes the 
-  name of the book -->
-  <!-- wrapping variable in braces to allow me to put tm next to it -->
-  <ul>
-    <!-- Providing myself more flexibiity for the foreach -->
-    <?php foreach ($books as $book) : ?>
-      <li><?= $book; ?></li>
-    <?php endforeach; ?>
-  </ul>
+  <?= $books[1] ?>
 </body>
 
 </html>
