@@ -24,7 +24,7 @@
   name of the book -->
   <ul>
     <?php foreach ($books as $book) {
-      echo "<li>Hello</li>";
+      echo "<li>$book</li>";
     }
     ?>
   </ul>
