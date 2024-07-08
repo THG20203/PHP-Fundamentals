@@ -26,12 +26,8 @@
   <ul>
     <!-- Providing myself more flexibiity for the foreach -->
     <?php foreach ($books as $book) : ?>
-      <li><?php echo $book; ?></li>
+      <li><?= $book; ?></li>
     <?php endforeach; ?>
-    <!-- <?php foreach ($books as $book) {
-            echo "<li><div>$book</div></li>";
-          }
-          ?> -->
   </ul>
 </body>
 
