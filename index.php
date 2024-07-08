@@ -3,30 +3,25 @@
 
 <head>
   <title>PHP learning</title>
-  <style>
-    body {
-      display: grid;
-      place-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: sans-serif;
-    }
-  </style>
 </head>
 
+<!-- Array - single variable that represents a list of recommended books -->
+
 <body>
-  <!-- php code -->
+  <h1>Recommended Books</h1>
+
+  <!-- array is the programming equivalent of a folder. Single varialbe that represents 
+  a list of recommended books -->
   <?php
-  $name = "dictionary";
-  $read = true;
-
-  $message = "You have read $name";
+  $books = [
+    "Do Androids dream of electric sheep",
+    "The Langoliers",
+    "Hail Mary",
+  ];
   ?>
+  <ul>
 
-  <h1>
-    <!-- <?php echo $message; ?>  -->
-    <?= $message; ?>
-  </h1>
+  </ul>
 </body>
 
 </html>
