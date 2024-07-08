@@ -6,16 +6,25 @@
 </head>
 
 <body>
-  <h1>Recommended Books</h1>
+  <!-- Associative array - associating a key with a value, like a key value pair -->
   <?php
   $books = [
-    "Do Androids dream of electric sheep",
-    "The Langoliers",
-    "Hail Mary",
+    [
+      "name" => "Do Androids dream of electric sheep",
+      "author" => "Philip Dick",
+      "purchaseUrl" => "https://example.com"
+    ],
+    [
+      "The Langoliers",
+      "Hail Mary",
+      "https://example.com"
+    ],
   ];
   ?>
 
-  <?= $books[1] ?>
+  <?php foreach ($books as $book) : ?>
+    <li><?= $book["name"]; ?></li>
+  <?php endforeach; ?>
 </body>
 
 </html>
