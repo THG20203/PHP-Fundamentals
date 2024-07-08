@@ -22,9 +22,10 @@
 
   <!-- loop over that list and for each item, display a list item that includes the 
   name of the book -->
+  <!-- wrapping variable in braces to allow me to put tm next to it -->
   <ul>
     <?php foreach ($books as $book) {
-      echo "<li>$book</li>";
+      echo "<li>{$book}™</li>";
     }
     ?>
   </ul>
