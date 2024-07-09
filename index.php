@@ -44,17 +44,14 @@
         $filteredBooks[] = $book;
       }
     }
+
+    return $filteredBooks;
   }
 
   ?>
 
   <ul>
-    <!-- The foreach loop in PHP is used to iterate over arrays. In this case, it iterates over the 
-    $books array.  -->
-    <!-- This is assumed to be an array of books. Each element in this array represents a book. -->
-    <!-- During each iteration of the foreach loop, the current element (a single book from the $books array) 
-    is assigned to the variable $book. -->
-    <?php foreach ($books as $book) : ?>
+    <?php foreach () : ?>
       <li>
         <a href="<?= $book['purchaseUrl'] ?>">
           <?= $book["name"]; ?> (<?= $book["releaseYear"] ?>) - By <?= $book["author"] ?>
@@ -63,12 +60,8 @@
     <?php endforeach; ?>
   </ul>
 
-  <p>
-    <?= filterByAuthor($books); ?>
-  </p>
-
 </body>
 
 </html>
 
-<!-- remember = signle equals is assigning. === is for chekcing for equality -->
+<!-- remember = single equals is assigning. === is for chekcing for equality -->
