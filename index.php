@@ -40,15 +40,22 @@
 
   ?>
 
-  <?php foreach ($books as $book) : ?>
-    <?php if ($book['author'] === "Andy Weir") : ?>
-      <li>
-        <a href="<?= $book['purchaseUrl'] ?>">
-          <?= $book["name"]; ?> (<?= $book["releaseYear"] ?>)
-        </a>
-      </li>
-    <?php endif; ?>
-  <?php endforeach; ?>
+  <ul>
+    <?php foreach ($books as $book) : ?>
+      <?php if ($book['author'] === "Andy Weir") : ?>
+        <li>
+          <a href="<?= $book['purchaseUrl'] ?>">
+            <?= $book["name"]; ?> (<?= $book["releaseYear"] ?>) - By <?= $book["author"] ?>
+          </a>
+        </li>
+      <?php endif; ?>
+    <?php endforeach; ?>
+  </ul>
+
+  <p>
+    <?= filterByAuthor(); ?>
+  </p>
+
 </body>
 
 </html>
