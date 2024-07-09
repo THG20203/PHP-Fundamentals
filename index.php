@@ -33,7 +33,7 @@
   // they then do something, then they return results)  
   function filterByAuthor()
   {
-    //
+    return "gibberish";
   }
 
   filterByAuthor();
