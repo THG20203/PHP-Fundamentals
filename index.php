@@ -31,12 +31,11 @@
 
   // Create function - (functions like the verbs of the programming language, they are to be called,
   // they then do something, then they return results)  
-  function filterByAuthor()
+  function filterByAuthor($books)
   {
+    /* filteredByAuthor should recieve the books, then filter them only by the books by Andy Weir */
     return "gibberish";
   }
-
-  filterByAuthor();
 
   ?>
 
@@ -53,7 +52,7 @@
   </ul>
 
   <p>
-    <?= filterByAuthor(); ?>
+    <?= filterByAuthor($books); ?>
   </p>
 
 </body>
