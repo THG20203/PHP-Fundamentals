@@ -31,14 +31,14 @@
 
   // Create function - (functions like the verbs of the programming language, they are to be called,
   // they then do something, then they return results)  
-  function filterByAuthor($books)
+  function filterByAuthor($books, $author)
   {
     $filteredBooks = [];
 
     // A foreach loop is used to iterate over each book in the $books array. For each iteration, the 
     // current book is assigned to the variable $book.
     foreach ($books as $book) {
-      if ($book["author"] === "Andy Weir") {
+      if ($book["author"] === $author) {
         // If the condition in the if statement is true (i.e., the author is "Andy Weir"), the current book is 
         // added to the $filteredBooks array using the [] syntax, which appends the book to the array.
         $filteredBooks[] = $book;
