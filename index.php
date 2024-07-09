@@ -41,13 +41,11 @@
 
   <ul>
     <?php foreach ($books as $book) : ?>
-      <?php if ($book['author'] === "Andy Weir") : ?>
-        <li>
-          <a href="<?= $book['purchaseUrl'] ?>">
-            <?= $book["name"]; ?> (<?= $book["releaseYear"] ?>) - By <?= $book["author"] ?>
-          </a>
-        </li>
-      <?php endif; ?>
+      <li>
+        <a href="<?= $book['purchaseUrl'] ?>">
+          <?= $book["name"]; ?> (<?= $book["releaseYear"] ?>) - By <?= $book["author"] ?>
+        </a>
+      </li>
     <?php endforeach; ?>
   </ul>
 
