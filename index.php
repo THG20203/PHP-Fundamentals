@@ -51,7 +51,7 @@
   ?>
 
   <ul>
-    <?php foreach () : ?>
+    <?php foreach (filterByAuthor($books) as $book) : ?>
       <li>
         <a href="<?= $book['purchaseUrl'] ?>">
           <?= $book["name"]; ?> (<?= $book["releaseYear"] ?>) - By <?= $book["author"] ?>
