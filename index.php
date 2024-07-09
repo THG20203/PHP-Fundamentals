@@ -28,6 +28,16 @@
       "purchaseUrl" => "https://example.com"
     ],
   ];
+
+  // Create function - (functions like the verbs of the programming language, they are to be called,
+  // they then do something, then they return results)  
+  function filterByAuthor()
+  {
+    //
+  }
+
+  filterByAuthor();
+
   ?>
 
   <?php foreach ($books as $book) : ?>
