@@ -1,3 +1,6 @@
+<!-- How to start up the server? Command in the terminal:
+php -S localhost:8888      -->
+
 <!DOCTYPE html>
 <html lang="en">
 
