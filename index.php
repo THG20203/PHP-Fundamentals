@@ -51,7 +51,7 @@
   ?>
 
   <ul>
-    <?php foreach (filterByAuthor($books) as $book) : ?>
+    <?php foreach (filterByAuthor($books, "Andy Weir") as $book) : ?>
       <li>
         <a href="<?= $book['purchaseUrl'] ?>">
           <?= $book["name"]; ?> (<?= $book["releaseYear"] ?>) - By <?= $book["author"] ?>
@@ -64,4 +64,4 @@
 
 </html>
 
-<!-- remember = single equals is assigning. === is for chekcing for equality -->
+<!-- remember = single equals is assigning. === is for checking for equality -->
