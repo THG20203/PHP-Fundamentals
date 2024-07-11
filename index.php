@@ -40,14 +40,17 @@ php -S localhost:8888      -->
         $filteredBooks[] = $book;
       }
     }
-
     return $filteredBooks;
   }
+
+  /* extract variable from array */
+  $filteredBooks = filterByAuthor($books, "Andy Weir")
 
   ?>
 
   <ul>
-    <?php foreach (filterByAuthor($books, "Andy Weir") as $book) : ?>
+    <!-- substituting the logic for variable (array was extracted above) -->
+    <?php foreach ($filteredBooks as $book) : ?>
       <li>
         <a href="<?= $book['purchaseUrl'] ?>">
           <?= $book["name"]; ?> (<?= $book["releaseYear"] ?>) - By <?= $book["author"] ?>
