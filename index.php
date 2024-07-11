@@ -32,8 +32,8 @@ php -S localhost:8888      -->
     ],
   ];
 
-  function filterByAuthor($books, $author)
-  {
+  /* LAMBDA FUNCTION */
+  $filteredByAuthor = function ($books, $author) {
     $filteredBooks = [];
     foreach ($books as $book) {
       if ($book["author"] === $author) {
@@ -41,15 +41,13 @@ php -S localhost:8888      -->
       }
     }
     return $filteredBooks;
-  }
+  };
 
-  /* extract variable from array */
-  $filteredBooks = filterByAuthor($books, "Andy Weir")
+  $filteredBooks = $filterByAuthor($books, "Andy Weir")
 
   ?>
 
   <ul>
-    <!-- substituting the logic for variable (array was extracted above) -->
     <?php foreach ($filteredBooks as $book) : ?>
       <li>
         <a href="<?= $book['purchaseUrl'] ?>">
