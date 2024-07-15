@@ -33,18 +33,18 @@ php -S localhost:8888      -->
   ];
 
   /* LAMBDA FUNCTION */
-  function filter($items, $author)
+  function filter($items, $key, $value)
   {
     $filteredItems = [];
     foreach ($items as $item) {
-      if ($item["author"] === $author) {
+      if ($item[$key] === $value) {
         $filteredItems[] = $item;
       }
     }
     return $filteredItems;
   };
 
-  $filteredBooks = filterByAuthor($books, "Andy Weir")
+  $filteredBooks = filter($books, "author", "Philip Dick")
 
   ?>
 
