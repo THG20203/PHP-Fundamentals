@@ -33,20 +33,23 @@ php -S localhost:8888      -->
   ];
 
   /* LAMBDA FUNCTION */
-  function filter($items, $fn)
-  {
-    $filteredItems = [];
-    foreach ($items as $item) {
-      if ($fn($item)) {
-        $filteredItems[] = $item;
-      }
-    }
-    return $filteredItems;
-  };
+  // function filter($items, $fn)
+  // {
+  //   $filteredItems = [];
+  //   foreach ($items as $item) {
+  //     if ($fn($item)) {
+  //       $filteredItems[] = $item;
+  //     }
+  //   }
+  //   return $filteredItems;
+  // };
 
-  /* full control of logic in the function call, with closure usage as parameter */
-  $filteredBooks = filter($books, function ($book) {
-    return $book['releaseYear'] > 1968;
+  // $filteredBooks = filter($books, function ($book) {
+  //   return $book['releaseYear'] > 2000;
+  // });
+
+  $filteredBooks = array_filter($books, function ($book) {
+    return $book['author'] === "Andy Weir";
   });
   ?>
 
