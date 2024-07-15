@@ -37,8 +37,6 @@ php -S localhost:8888      -->
   {
     $filteredItems = [];
     foreach ($items as $item) {
-      /* currently this if statement is based on equality, rather than something more generic like, after,
-      greater than, less than */
       if ($item[$key] === $value) {
         $filteredItems[] = $item;
       }
@@ -46,8 +44,12 @@ php -S localhost:8888      -->
     return $filteredItems;
   };
 
-  $filteredBooks = filter($books, "releaseYear", 2021)
-
+  /* pass an array to filter Function, then a closure / anonymous function, where I can 
+  be in charge of how comparison is made. So have more flexibility in terms of selecting equality, 
+  or greater than 1968 etc. As I have below. I have changed the comparison. */
+  $filteredBooks = filter($books, function ($book) {
+    return $book['releaseYear'] > 1968;
+  });
   ?>
 
   <ul>
