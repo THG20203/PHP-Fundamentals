@@ -44,7 +44,7 @@ php -S localhost:8888      -->
     return $filteredItems;
   };
 
-  $filteredBooks = filter($books, "author", "Philip Dick")
+  $filteredBooks = filter($books, "releaseYear", 2021)
 
   ?>
 
