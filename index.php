@@ -33,20 +33,18 @@ php -S localhost:8888      -->
   ];
 
   /* LAMBDA FUNCTION */
-  function filter($items, $key, $value)
+  function filter($items, $fn)
   {
     $filteredItems = [];
     foreach ($items as $item) {
-      if ($item[$key] === $value) {
+      if ($fn($item)) {
         $filteredItems[] = $item;
       }
     }
     return $filteredItems;
   };
 
-  /* pass an array to filter Function, then a closure / anonymous function, where I can 
-  be in charge of how comparison is made. So have more flexibility in terms of selecting equality, 
-  or greater than 1968 etc. As I have below. I have changed the comparison. */
+  /* full control of logic in the function call, with closure usage as parameter */
   $filteredBooks = filter($books, function ($book) {
     return $book['releaseYear'] > 1968;
   });
