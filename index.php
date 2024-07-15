@@ -33,7 +33,8 @@ php -S localhost:8888      -->
   ];
 
   /* LAMBDA FUNCTION */
-  $filterByAuthor = function ($books, $author) {
+  function filterByAuthor($books, $author)
+  {
     $filteredBooks = [];
     foreach ($books as $book) {
       if ($book["author"] === $author) {
@@ -43,7 +44,7 @@ php -S localhost:8888      -->
     return $filteredBooks;
   };
 
-  $filteredBooks = $filterByAuthor($books, "Andy Weir")
+  $filteredBooks = filterByAuthor($books, "Andy Weir")
 
   ?>
 
