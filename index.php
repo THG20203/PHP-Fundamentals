@@ -37,6 +37,8 @@ php -S localhost:8888      -->
   {
     $filteredItems = [];
     foreach ($items as $item) {
+      /* currently this if statement is based on equality, rather than something more generic like, after,
+      greater than, less than */
       if ($item[$key] === $value) {
         $filteredItems[] = $item;
       }
