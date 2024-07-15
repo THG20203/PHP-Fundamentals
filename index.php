@@ -33,15 +33,15 @@ php -S localhost:8888      -->
   ];
 
   /* LAMBDA FUNCTION */
-  function filterByAuthor($books, $author)
+  function filter($items, $author)
   {
-    $filteredBooks = [];
-    foreach ($books as $book) {
-      if ($book["author"] === $author) {
-        $filteredBooks[] = $book;
+    $filteredItems = [];
+    foreach ($items as $item) {
+      if ($item["author"] === $author) {
+        $filteredItems[] = $item;
       }
     }
-    return $filteredBooks;
+    return $filteredItems;
   };
 
   $filteredBooks = filterByAuthor($books, "Andy Weir")
